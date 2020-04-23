@@ -1,0 +1,20 @@
+.button {
+  @include button(
+    $width: 280px,
+    $padding: 10px 0,
+    $font-size: 16px,
+    $line-height: 20px
+  );
+
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+}

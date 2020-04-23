@@ -1,0 +1,23 @@
+.promo-block {
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: "";
+    background-image: url("../../img/index-background-mobile.jpg");
+    position: absolute;
+    z-index: -1;
+    width: 320px;
+    height: 305px;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../../img/index-can-mobile.png");
+    position: absolute;
+    z-index: 0;
+    width: 280px;
+    height: 270px;
+    margin-top: 167px;
+  }
+}

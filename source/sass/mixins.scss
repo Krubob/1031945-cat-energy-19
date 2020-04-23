@@ -1,0 +1,12 @@
+@mixin button($width, $padding, $font-size, $line-height) {
+  background-color: $bgrnd-color-green;
+  color: #ffffff;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: uppercase;
+  width: $width;
+  padding: $padding;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
