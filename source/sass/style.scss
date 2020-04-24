@@ -1,72 +1,42 @@
 @import "variables.scss";
 @import "mixins.scss";
-@import "blocks/header/header.scss";
-@import "blocks/header/header__logo-image.scss";
-@import "blocks/header/header__logo.scss";
-@import "blocks/main/main.scss";
-@import "blocks/main-nav/main-nav.scss";
-@import "blocks/main-nav/main-nav__wrapper.scss";
-@import "blocks/main-nav/main-nav__toggle.scss";
-@import "blocks/main-nav/main-nav__list.scss";
-@import "blocks/promo-block/promo-block.scss";
-@import "blocks/promo-block/promo-block__button.scss";
-@import "blocks/promo-block/promo-block__title.scss";
-@import "blocks/programs/programs.scss";
-@import "blocks/programs/programs__card.scss";
-@import "blocks/programs/programs__description.scss";
-@import "blocks/programs/programs__link.scss";
-@import "blocks/programs/programs__title.scss";
-@import "blocks/advantages/advantages.scss";
-@import "blocks/advantages/advantages__title.scss";
-@import "blocks/advantages/advantages__description.scss";
-@import "blocks/usecases/usecases.scss";
-@import "blocks/usecases/usecases__title.scss";
-@import "blocks/usecases/usecases__costs.scss";
-@import "blocks/usecases/usecases__description.scss";
-@import "blocks/usecases/usecases__field.scss";
-@import "blocks/usecases/usecases__value.scss";
-@import "blocks/usecases/usecases__result.scss";
-@import "blocks/usecases/usecases__results-wrapper.scss";
-@import "blocks/usecases/usecases__slider.scss";
-@import "blocks/contacts/contacts.scss";
-@import "blocks/contacts/contacts__title.scss";
-@import "blocks/contacts/contacts__map.scss";
-@import "blocks/contacts/contacts__address.scss";
-@import "blocks/form/form.scss";
-@import "blocks/form/form__button.scss";
-@import "blocks/form/form__checkbox.scss";
-@import "blocks/form/form__description.scss";
-@import "blocks/form/form__element-title.scss";
-@import "blocks/form/form__input.scss";
-@import "blocks/form/form__label.scss";
-@import "blocks/form/form__notion.scss";
-@import "blocks/form/form__radio.scss";
-@import "blocks/form/form__text.scss";
-@import "blocks/form/form__title.scss";
-@import "blocks/catalog/catalog.scss";
-@import "blocks/catalog/catalog__title.scss";
-@import "blocks/catalog/catalog__card-title.scss";
-@import "blocks/catalog/catalog__table.scss";
-@import "blocks/catalog/catalog__value.scss";
-@import "blocks/catalog/catalog__field.scss";
-@import "blocks/catalog/catalog__subscription.scss";
-@import "blocks/catalog/catalog__extra-title.scss";
-@import "blocks/catalog/catalog__promo-description.scss";
-@import "blocks/footer/footer__contacts.scss";
-@import "blocks/footer/footer__wrapper.scss";
-@import "blocks/button/button.scss";
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "blocks/promo-block.scss";
+@import "blocks/programs.scss";
+@import "blocks/advantages.scss";
+@import "blocks/usecases.scss";
+@import "blocks/contacts.scss";
+@import "blocks/form.scss";
+@import "blocks/catalog.scss";
+@import "blocks/footer.scss";
+@import "blocks/button.scss";
+@import "blocks/copyright.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/slider.scss";
+@import "blocks/social.scss";
 
 body {
-  background-color: $bgrnd-color-white;
-  color: $text-color-basic;
-  font-family: $font-family-main;
   min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family-main;
+  color: $text-color-basic;
+  font-style: normal;
+
+  background-color: $bgrnd-color-white;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
