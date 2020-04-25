@@ -1,9 +1,41 @@
 .header {
-  min-height: 65px;
+  @include container();
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
 }
 
 .header__logo {
+  display: block;
+  height: 65px;
 }
 
-.header__logo-image {
+.header__toggle {
+  width: 25px;
+  height: 19px;
+
+  background-color: transparent;
+  border: none;
+
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .header__logo {
+    height: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo {
+    height: 60px;
+  }
 }

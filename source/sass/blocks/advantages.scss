@@ -1,89 +1,72 @@
 .advantages {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.advantages__list {
+  padding: 0 20px;
 }
 
 .advantages__title {
-  margin: 0;
-  padding: 0;
-  font-size: 36px;
-  line-height: 60px;
+  @include text(36px, 60px);
+  padding: 0 20px;
+  margin-top: 20px;
+  font-weight: normal;
   color: $color-black;
 }
 
 .advantages__description {
-  font-size: $font-size-mobile-p;
-  line-height: $line-height-mobile-text;
+  @include text(14px, 18px);
+  position: relative;
   color: $color-darkgray;
   font-family: $font-family-basic;
+  margin-top: 28px;
+  margin-bottom: 30px;
+  padding-left: 80px;
 
-  &--natural::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 50px;
-    height: 50px;
-    background-image: url("../../img/advantage-leaf.png");
+  &::before {
+    @include pseudo-element();
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-green;
   }
 
   &--natural::before {
     content: "";
     position: absolute;
-    z-index: 0;
-    width: 60px;
-    height: 60px;
-    background-color: $color-green;
-  }
-
-  &--cooking::after {
-    content: "";
-    position: absolute;
     z-index: 1;
-    width: 50px;
-    height: 50px;
-    background-image: url("../../img/advantage-powder.png");
+    background-image: url("../../img/advantage-leaf.png");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--cooking::before {
     content: "";
     position: absolute;
-    z-index: 0;
-    width: 60px;
-    height: 60px;
-    background-color: $color-green;
-  }
-
-  &--feeding::after {
-    content: "";
-    position: absolute;
     z-index: 1;
-    width: 50px;
-    height: 50px;
-    background-image: url("../../img/advantage-dining.png");
+    background-image: url("../../img/advantage-powder.png");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--feeding::before {
     content: "";
     position: absolute;
-    z-index: 0;
-    width: 60px;
-    height: 60px;
-    background-color: $color-green;
-  }
-
-  &--term::after {
-    content: "";
-    position: absolute;
     z-index: 1;
-    width: 50px;
-    height: 50px;
-    background-image: url("../../img/advantage-clock.png");
+
+    background-image: url("../../img/advantage-dining.png");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--term::before {
     content: "";
     position: absolute;
-    z-index: 0;
-    width: 60px;
-    height: 60px;
-    background-color: $color-green;
+    z-index: 1;
+    background-image: url("../../img/advantage-clock.png");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

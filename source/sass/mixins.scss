@@ -1,5 +1,5 @@
 @mixin button($width, $padding, $font-size, $line-height) {
-  background-color: $bgrnd-color-green;
+  background-color: $color-green;
   color: #ffffff;
   font-size: $font-size;
   line-height: $line-height;
@@ -9,4 +9,44 @@
   text-align: center;
   border: none;
   cursor: pointer;
+}
+
+@mixin container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  // @media (min-width: $tablet-width) {
+  //   width: $tablet-width;
+  //   padding: 0 30px;
+  //   margin: 0 auto;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   width: $desktop-width;
+  //   padding: 0 40px;
+  //   margin: 0 auto;
+  // }
+}
+
+@mixin text($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin pseudo-element($content: "", $display: block, $position: absolute) {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
+@mixin no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin zero-indent {
+  padding: 0;
+  margin: 0;
 }

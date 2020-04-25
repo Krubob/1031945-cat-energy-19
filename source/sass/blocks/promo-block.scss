@@ -1,45 +1,59 @@
 .promo-block {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  margin: 0 auto;
+  width: $mobile-width;
+
+  min-height: 320px;
+
+  text-align: center;
 
   &::before {
-    content: "";
+    @include pseudo-element();
+
     background-image: url("../../img/index-background-mobile.jpg");
-    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: -1;
-    width: 320px;
+
     height: 305px;
   }
 
   &::after {
-    content: "";
+    @include pseudo-element();
+
     background-image: url("../../img/index-can-mobile.png");
-    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 0;
+
+    margin-top: 167px;
+
     width: 280px;
     height: 270px;
-    margin-top: 167px;
   }
 }
 
 .promo-block__title {
-  margin: 0;
-  margin-top: 29px;
-  font-size: $font-size-mobile-h2;
-  line-height: 36px;
+  @include zero-indent();
+  @include text(36px, 36px);
+  padding-top: 30px;
   color: $color-white;
   font-weight: normal;
 }
 
 .promo-block__slogan {
-  margin: 0;
-  margin-top: 19px;
-  font-size: $font-size-mobile-p;
-  line-height: 14px;
+  @include zero-indent();
+  @include text(14px, 14px);
+  padding-top: 20px;
   text-transform: uppercase;
   color: $color-white;
   font-weight: normal;
 }
 
 .promo-block__button {
+  margin: 0 auto;
+  margin-top: 300px;
 }

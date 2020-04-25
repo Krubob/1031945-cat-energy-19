@@ -1,22 +1,26 @@
-.footer {
+.footer .footer__contacts {
+  background-color: $color-white;
 }
 
 .footer__wrapper {
+  width: $mobile-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: $color-gray;
-  width: 320px;
-}
-
-.footer__social {
 }
 
 .footer__logo-name {
+  text-align: center;
 }
 
-.footer__logo-name-image {
+.footer__social {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__copyright {
-}
-
-.footer__contacts {
+  display: flex;
+  justify-content: space-between;
 }

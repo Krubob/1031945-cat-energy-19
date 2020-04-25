@@ -1,18 +1,24 @@
-.contacts {
+.contacts__inner {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-white;
 }
 
 .contacts__title {
-  font-size: 16px;
-  line-height: 20px;
+  @include text(16px, 20px);
   text-transform: uppercase;
-}
-
-.contacts__map {
+  font-weight: normal;
 }
 
 .contacts-address {
-  font-size: $font-size-mobile-p;
-  line-height: 20px;
+  @include text(14px, 20px);
   color: $color-darkgray;
   font-family: $font-family-basic;
+}
+
+.contacts__map {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
 }

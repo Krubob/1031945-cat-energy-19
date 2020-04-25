@@ -1,79 +1,93 @@
 .programs {
-  margin: 0;
-  padding: 0;
+  @include container();
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .programs__title {
-  font-size: $font-size-mobile-h3;
-  line-height: 37px;
+  position: relative;
+
+  @include zero-indent();
+  @include text(24px, 37px);
+
+  padding-top: 32px;
+  padding-left: 92px;
+
   font-weight: normal;
   text-transform: uppercase;
-}
-
-.programs__link {
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: $color-black;
 
   &::after {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    width: 25px;
-    height: 12px;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    @include pseudo-element();
+    top: 24px;
+    left: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $color-green;
   }
 }
 
 .programs__description {
+  @include zero-indent();
+  @include text(14px, 18px);
+  padding: 24px 0;
   font-family: $font-family-basic;
-  font-size: $font-size-mobile-p;
-  line-height: 18px;
   color: $color-darkgray;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.programs__link {
+  position: relative;
+  display: block;
+  padding-top: 20px;
+
+  @include text(16px, 16px);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-black;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    @include pseudo-element();
+    top: 22px;
+    left: 95px;
+    width: 25px;
+    height: 12px;
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .programs__card {
-  margin: 0;
+  position: relative;
+
+  @include zero-indent();
+  padding: 0 20px;
   margin-top: 20px;
-  width: 280px;
+  width: 240px;
   height: 266px;
   background-color: $color-gray;
 
-  &--slim::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 50px;
-    height: 51px;
-    border-radius: 50px;
-    background-color: $color-green;
-  }
-
   &--slim::before {
-    content: "";
-    position: absolute;
-    z-index: 100;
+    @include pseudo-element();
+    z-index: 1;
+    top: 22px;
+    left: 50px;
     width: 35px;
     height: 49px;
     background-image: url("../../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
   }
 
-  &--weight::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 50px;
-    height: 51px;
-    border-radius: 50px;
-    background-color: $color-green;
-  }
-
   &--weight::before {
-    content: "";
-    position: absolute;
-    z-index: 100;
+    @include pseudo-element();
+    z-index: 1;
+    top: 35px;
+    left: 33px;
     width: 67px;
     height: 28px;
     background-image: url("../../img/icon-cat-pro.svg");
