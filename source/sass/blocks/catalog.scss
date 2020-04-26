@@ -1,29 +1,41 @@
+.catalog {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.catalog__card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__good-card {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .catalog__title {
-  font-size: $font-size-mobile-h2;
-  line-height: 60px;
+  @include text(36px, 60px);
+  font-weight: normal;
+}
+
+.catalog__card-title {
+  @include text(16px, 20px);
+  font-weight: normal;
+  text-transform: uppercase;
+
+  margin-top: 25px;
+  padding-right: 88px;
+
+  &--last {
+    padding: 0 40px;
+  }
 }
 
 .catalog__table {
-  font-size: 12px;
-  line-height: 16px;
+  @include text(12px, 16px);
   font-family: $font-family-basic;
   color: $color-darkgray;
 }
 
-.catalog__card-title {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.catalog__extra-title {
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.catalog__promo-description {
-  font-size: $font-size-mobile-p;
-  line-height: 20px;
-  font-family: $font-family-basic;
-  color: $color-white;
+.catalog__button {
+  margin-bottom: 25px;
 }

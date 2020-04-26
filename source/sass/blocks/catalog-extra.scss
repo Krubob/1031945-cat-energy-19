@@ -1,0 +1,43 @@
+.catalog-extra {
+  @include container();
+  margin-bottom: 0;
+}
+
+.catalog-extra__title {
+  @include text(24px, 24px);
+  font-weight: normal;
+}
+
+.catalog-extra__promo {
+  min-height: 289px;
+
+  text-align: center;
+
+  background-image: url("../img/gift-photo-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.catalog-extra__promo-description {
+  @include text(16px, 20px);
+  position: relative;
+  font-family: $font-family-basic;
+  color: $color-white;
+
+  padding-top: 190px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+
+  &::after {
+    @include pseudo-element();
+    top: 65px;
+    left: 133px;
+
+    width: 56px;
+    height: 61px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
