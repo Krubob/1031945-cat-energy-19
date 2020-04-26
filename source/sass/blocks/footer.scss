@@ -1,26 +1,27 @@
-.footer .footer__contacts {
-  background-color: $color-white;
+.footer {
+  @include container();
 }
 
 .footer__wrapper {
-  width: $mobile-width;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $color-gray;
 }
 
-.footer__logo-name {
-  text-align: center;
+.footer__logo {
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
-.footer__social {
-  display: flex;
-  justify-content: space-between;
+.footer__logo-link {
+  margin: 0 auto;
 }
 
 .footer__copyright {
+  height: 80px;
+  width: 280px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
