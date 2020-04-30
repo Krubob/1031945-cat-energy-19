@@ -1,18 +1,25 @@
 .button {
+  @include text(16px, 20px);
   display: block;
-  box-sizing: border-box;
-  font-family: $font-family-main;
+  margin: 0 auto;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   border: none;
+  cursor: pointer;
 
-  @include button(
-    $width: 280px,
-    $padding: 10px 20px,
-    $font-size: 14px,
-    $line-height: 18px
-  );
+  width: 280px;
+  padding: 10px 20px;
+  background-color: $color-green;
+  color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    width: 247px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 167px;
+  }
 
   &:hover {
     color: #ffffff;

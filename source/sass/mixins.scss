@@ -1,32 +1,19 @@
-@mixin button($width, $padding, $font-size, $line-height) {
-  background-color: $color-green;
-  color: #ffffff;
-  font-size: $font-size;
-  line-height: $line-height;
-  text-transform: uppercase;
-  width: $width;
-  padding: $padding;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-}
-
 @mixin container {
   width: $mobile-width;
   margin: 0 auto;
   padding: 0 20px;
 
-  // @media (min-width: $tablet-width) {
-  //   width: $tablet-width;
-  //   padding: 0 30px;
-  //   margin: 0 auto;
-  // }
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
 
-  // @media (min-width: $desktop-width) {
-  //   width: $desktop-width;
-  //   padding: 0 40px;
-  //   margin: 0 auto;
-  // }
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
 }
 
 @mixin text($font-size, $line-height) {

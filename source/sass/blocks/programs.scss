@@ -3,6 +3,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .programs__title {
@@ -20,11 +24,26 @@
   &::after {
     @include pseudo-element();
     top: 24px;
-    left: 24px;
+    left: 0;
     width: 50px;
     height: 50px;
     border-radius: 50px;
     background-color: $color-green;
+
+    @media (min-width: $tablet-width) {
+      top: 92px;
+      left: 394px;
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 36px;
+    line-height: 37px;
+    padding-top: 55px;
   }
 }
 
@@ -35,6 +54,12 @@
   font-family: $font-family-basic;
   color: $color-darkgray;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 24px);
+    width: 375px;
+    border: none;
+  }
 }
 
 .programs__link {
@@ -57,8 +82,18 @@
     left: 95px;
     width: 25px;
     height: 12px;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 65px;
+      left: 131px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    padding-top: 60px;
   }
 }
 
@@ -66,31 +101,52 @@
   position: relative;
 
   @include zero-indent();
-  padding: 0 20px;
   margin-top: 20px;
-  width: 240px;
   height: 266px;
+  padding-left: 20px;
   background-color: $color-gray;
 
   &--slim::before {
     @include pseudo-element();
     z-index: 1;
     top: 22px;
-    left: 50px;
+    left: 30px;
     width: 35px;
     height: 49px;
     background-image: url("../../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 80px;
+      left: 475px;
+
+      width: 141px;
+      height: 194px;
+    }
   }
 
   &--weight::before {
     @include pseudo-element();
     z-index: 1;
     top: 35px;
-    left: 33px;
+    left: 13px;
     width: 67px;
     height: 28px;
     background-image: url("../../img/icon-cat-pro.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 135px;
+      left: 412px;
+
+      width: 268px;
+      height: 113px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 372px;
+    padding-left: 55px;
   }
 }

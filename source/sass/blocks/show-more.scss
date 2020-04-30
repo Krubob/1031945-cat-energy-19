@@ -1,0 +1,28 @@
+.show-more {
+  text-align: center;
+}
+
+.show-more__title {
+  @include text(16px, 20px);
+  font-weight: normal;
+
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
+}
+
+.show-more__subscription {
+  @include text(12px, 16px);
+  color: $color-darkgray;
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 20px);
+  }
+}
+
+.show-more__button {
+  color: $color-darkgray;
+  background-color: $color-gray;
+}

@@ -1,11 +1,88 @@
 .catalog-extra {
   @include container();
-  margin-bottom: 0;
+}
+
+.catalog-extra__good-card {
+  border-top: 1px solid $color-gray;
+  border-bottom: 1px solid $color-gray;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $color-gray;
+    padding: 0 40px;
+    padding-bottom: 28px;
+  }
+}
+
+.catalog-extra__card-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .catalog-extra__title {
-  @include text(24px, 24px);
+  @include text(36px, 36px);
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+  }
+}
+
+.catalog-extra__card-title {
+  @include zero-indent;
+  @include text(16px, 16px);
+  font-weight: normal;
+  text-transform: uppercase;
+
+  margin-top: 25px;
+  padding-right: 88px;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    margin-top: 28px;
+  }
+}
+
+.catalog-extra__table {
+  @include text(14px, 14px);
+  width: 100%;
+  margin-bottom: 14px;
+  font-family: $font-family-basic;
+  color: $color-darkgray;
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 20px);
+    margin-bottom: 20px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+  }
+}
+
+.catalog-extra__field {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.catalog-extra__value {
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+  }
 }
 
 .catalog-extra__promo {
@@ -39,5 +116,16 @@
 
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
+  }
+}
+
+.catalog-extra__button {
+  @media (min-width: $tablet-width) {
+    width: 631px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    align-self: center;
   }
 }

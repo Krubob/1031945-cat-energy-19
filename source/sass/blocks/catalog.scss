@@ -1,20 +1,39 @@
 .catalog {
-  width: $mobile-width;
-  margin: 0 auto;
+  @include container();
+}
+
+.catalog__good-card {
+  border-bottom: 1px solid $color-gray;
+
+  &--last {
+  }
 }
 
 .catalog__card-wrapper {
   display: flex;
   justify-content: space-between;
-}
 
-.catalog__good-card {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .catalog__title {
+  @include zero-indent;
   @include text(36px, 60px);
   font-weight: normal;
+
+  padding-top: 22px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $color-gray;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    border-bottom: none;
+  }
 }
 
 .catalog__card-title {
@@ -25,8 +44,8 @@
   margin-top: 25px;
   padding-right: 88px;
 
-  &--last {
-    padding: 0 40px;
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
   }
 }
 
@@ -34,6 +53,18 @@
   @include text(12px, 16px);
   font-family: $font-family-basic;
   color: $color-darkgray;
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 16px);
+  }
+}
+
+.catalog__field {
+  text-align: left;
+}
+
+.catalog__value {
+  text-align: right;
 }
 
 .catalog__button {

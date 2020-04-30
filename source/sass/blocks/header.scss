@@ -8,13 +8,14 @@
 .header__wrapper {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid $color-gray;
 
   justify-content: space-between;
 }
 
-.header__logo {
-  display: block;
-  height: 65px;
+.header__logo svg {
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .header__toggle {

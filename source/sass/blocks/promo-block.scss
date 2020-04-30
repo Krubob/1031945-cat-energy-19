@@ -1,38 +1,36 @@
 .promo-block {
+  @include container();
   position: relative;
-  margin: 0 auto;
-  width: $mobile-width;
-
-  min-height: 320px;
 
   text-align: center;
 
   &::before {
     @include pseudo-element();
 
-    background-image: url("../../img/index-background-mobile.jpg");
     top: 0;
     left: 0;
     right: 0;
     z-index: -1;
 
     height: 305px;
+    background-image: url("../../img/index-background-mobile.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
-  &::after {
-    @include pseudo-element();
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
-    background-image: url("../../img/index-can-mobile.png");
-
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-
-    margin-top: 167px;
-
-    width: 280px;
-    height: 270px;
+.promo-block__wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 90px;
   }
 }
 
@@ -42,6 +40,13 @@
   padding-top: 30px;
   color: $color-white;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    text-align: left;
+    color: $color-black;
+    padding-right: 208px;
+  }
 }
 
 .promo-block__slogan {
@@ -51,9 +56,30 @@
   text-transform: uppercase;
   color: $color-white;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    color: $color-black;
+    text-align: left;
+
+    padding-top: 33px;
+  }
+}
+
+.promo-block__image {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+
+  margin-top: 29px;
 }
 
 .promo-block__button {
-  margin: 0 auto;
   margin-top: 300px;
+
+  @include text(14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
 }
