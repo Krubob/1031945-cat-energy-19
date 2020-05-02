@@ -1,12 +1,37 @@
-@mixin button($width, $padding, $font-size, $line-height) {
-  background-color: $bgrnd-color-green;
-  color: #ffffff;
+@mixin container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 40px;
+  }
+}
+
+@mixin text($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
-  text-transform: uppercase;
-  width: $width;
-  padding: $padding;
-  text-align: center;
-  border: none;
-  cursor: pointer;
+}
+
+@mixin pseudo-element($content: "", $display: block, $position: absolute) {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
+@mixin no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin zero-indent {
+  padding: 0;
+  margin: 0;
 }

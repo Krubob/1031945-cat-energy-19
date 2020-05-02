@@ -1,47 +1,99 @@
 .usecases {
-  margin: 0;
-  padding: 0;
-  width: 320px;
+  @include container();
   background-color: $color-gray;
 }
 
-.usecases__title {
-  font-size: $font-size-mobile-h2;
-  line-height: 60px;
-}
-
-.usecases__value {
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-family: $font-family-main;
-}
-
-.usecases__slider {
+.usecases__wrapper {
+  padding-bottom: 30px;
+  padding-right: 20px;
 }
 
 .usecases__results-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.usecases__title {
+  @include text(36px, 60px);
+  @include zero-indent();
+  font-weight: normal;
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    padding-top: 50px;
+  }
 }
 
 .usecases__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 56px;
+  border: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 52px;
+    margin-right: 42px;
+  }
+}
+
+.usecases__value {
+  @include text(24px, 24px);
+  text-transform: uppercase;
+  font-family: $font-family-main;
+
+  @media (min-width: $tablet-width) {
+    @include text(30px, 37px);
+  }
 }
 
 .usecases__field {
-  font-size: 12px;
-  line-height: 12px;
+  @include text(12px, 12px);
   color: $color-darkgray;
   font-family: $font-family-basic;
+  margin-left: 0;
+
+  @media (min-width: $tablet-width) {
+    @include text(14px, 14px);
+  }
 }
 
 .usecases__description {
-  font-size: $font-size-mobile-p;
-  line-height: $line-height-mobile-text;
+  @include text(14px, 18px);
   color: $color-darkgray;
   font-family: $font-family-basic;
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 24px);
+    margin: 0;
+    padding-top: 60px;
+  }
 }
 
 .usecases__costs {
-  font-size: $font-size-mobile-p;
-  line-height: 20px;
+  @include text(14px, 20px);
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
+}
+
+.slider__progress-button {
+  @include text(16px, 20px);
+  font-weight: normal;
+  text-transform: uppercase;
+  border: none;
+}
+
+.slider__cat-image {
+  margin-bottom: 35px;
 }

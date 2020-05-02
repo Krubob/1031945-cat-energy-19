@@ -1,5 +1,7 @@
-.copyright {
-}
-
-.copyright__link {
+.copyright__link-text {
+  @include text(16px, 16px);
+  @include zero-indent();
+  text-decoration: none;
+  font-family: $font-family-basic;
+  color: $color-darkgray;
 }

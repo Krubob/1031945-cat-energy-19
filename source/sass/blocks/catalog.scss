@@ -1,53 +1,73 @@
 .catalog {
-}
-
-.catalog__title {
-  font-size: $font-size-mobile-h2;
-  line-height: 60px;
-}
-
-.catalog__table {
-  font-size: 12px;
-  line-height: 16px;
-  font-family: $font-family-basic;
-  color: $color-darkgray;
-}
-
-.catalog__value {
-}
-
-.catalog__field {
-}
-
-.catalog__card-title {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  @include container();
 }
 
 .catalog__good-card {
+  border-bottom: 1px solid $color-gray;
+
+  &--last {
+  }
 }
 
-.catalog__good-image {
+.catalog__card-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.catalog__extra-title {
-  font-size: 24px;
-  line-height: 24px;
+.catalog__title {
+  @include zero-indent;
+  @include text(36px, 60px);
+  font-weight: normal;
+
+  padding-top: 22px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $color-gray;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    border-bottom: none;
+  }
 }
 
-.catalog__promo {
+.catalog__card-title {
+  @include text(16px, 20px);
+  font-weight: normal;
+  text-transform: uppercase;
+
+  margin-top: 25px;
+  padding-right: 88px;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
 }
 
-.catalog__promo-description {
-  font-size: $font-size-mobile-p;
-  line-height: 20px;
+.catalog__table {
+  @include text(12px, 16px);
   font-family: $font-family-basic;
-  color: $color-white;
+  color: $color-darkgray;
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 16px);
+  }
 }
 
-.catalog__promo-background-image {
+.catalog__field {
+  text-align: left;
 }
 
-.catalog__show-all-button {
+.catalog__value {
+  text-align: right;
+}
+
+.catalog__button {
+  margin: 0 auto;
+  margin-bottom: 25px;
 }

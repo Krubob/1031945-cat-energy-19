@@ -1,45 +1,102 @@
 .promo-block {
-  margin: 0;
-  padding: 0;
+  @include container();
+  position: relative;
+
+  text-align: center;
 
   &::before {
-    content: "";
-    background-image: url("../../img/index-background-mobile.jpg");
-    position: absolute;
-    z-index: -1;
-    width: 320px;
-    height: 305px;
-  }
+    @include pseudo-element();
 
-  &::after {
-    content: "";
-    background-image: url("../../img/index-can-mobile.png");
-    position: absolute;
-    z-index: 0;
-    width: 280px;
-    height: 270px;
-    margin-top: 167px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 305px;
+    background-image: url("../../img/index-background-mobile.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      background-color: $color-white;
+      background-image: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include pseudo-element();
+      top: -175px;
+      left: 50%;
+      height: 696px;
+      background-color: #63a73a;
+      background-image: url("../img/index-background-desktop.jpg");
+      background-position: top left;
+    }
+  }
+}
+
+.promo-block__wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .promo-block__title {
-  margin: 0;
-  margin-top: 29px;
-  font-size: $font-size-mobile-h2;
-  line-height: 36px;
+  @include zero-indent();
+  @include text(36px, 36px);
+  padding-top: 30px;
   color: $color-white;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    width: 550px;
+    text-align: left;
+    color: $color-black;
+    padding-right: 208px;
+    order: -3;
+  }
 }
 
 .promo-block__slogan {
-  margin: 0;
-  margin-top: 19px;
-  font-size: $font-size-mobile-p;
-  line-height: 14px;
+  @include zero-indent();
+  @include text(14px, 14px);
+  padding-top: 20px;
+  margin-bottom: 48px;
   text-transform: uppercase;
   color: $color-white;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    color: $color-black;
+    text-align: left;
+
+    padding-top: 33px;
+    order: -2;
+  }
+}
+
+.promo-block__image {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+
+  margin-top: 29px;
 }
 
 .promo-block__button {
+  @include text(14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    order: -1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }
