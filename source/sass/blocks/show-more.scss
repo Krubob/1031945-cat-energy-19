@@ -1,5 +1,6 @@
 .show-more {
   text-align: center;
+  background-color: $color-white;
 }
 
 .show-more__title {
@@ -16,6 +17,7 @@
 .show-more__subscription {
   @include text(12px, 16px);
   color: $color-darkgray;
+  font-family: $font-family-basic;
 
   @media (min-width: $tablet-width) {
     @include text(16px, 20px);
@@ -25,4 +27,6 @@
 .show-more__button {
   color: $color-darkgray;
   background-color: $color-gray;
+
+  margin: 0 auto;
 }

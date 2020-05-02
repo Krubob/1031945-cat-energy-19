@@ -18,19 +18,27 @@
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      display: none;
+      background-color: $color-white;
+      background-image: none;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
+    @media (min-width: $desktop-width) {
+      @include pseudo-element();
+      top: -175px;
+      left: 50%;
+      height: 696px;
+      background-color: #63a73a;
+      background-image: url("../img/index-background-desktop.jpg");
+      background-position: top left;
+    }
   }
 }
 
 .promo-block__wrapper {
   @media (min-width: $tablet-width) {
-    padding-left: 90px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -43,9 +51,11 @@
 
   @media (min-width: $tablet-width) {
     @include text(60px, 60px);
+    width: 550px;
     text-align: left;
     color: $color-black;
     padding-right: 208px;
+    order: -3;
   }
 }
 
@@ -53,6 +63,7 @@
   @include zero-indent();
   @include text(14px, 14px);
   padding-top: 20px;
+  margin-bottom: 48px;
   text-transform: uppercase;
   color: $color-white;
   font-weight: normal;
@@ -63,6 +74,7 @@
     text-align: left;
 
     padding-top: 33px;
+    order: -2;
   }
 }
 
@@ -75,11 +87,16 @@
 }
 
 .promo-block__button {
-  margin-top: 300px;
-
   @include text(14px, 18px);
 
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
+    order: -1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
   }
 }

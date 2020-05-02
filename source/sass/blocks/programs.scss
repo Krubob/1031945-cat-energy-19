@@ -4,8 +4,10 @@
   align-items: center;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -37,27 +39,48 @@
       height: 200px;
       border-radius: 200px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding: 0;
     font-size: 36px;
     line-height: 37px;
-    padding-top: 55px;
+    padding-top: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text(36px, 37px);
+    padding-left: 166px;
   }
 }
 
 .programs__description {
   @include zero-indent();
   @include text(14px, 18px);
-  padding: 24px 0;
+  padding-bottom: 24px;
+  padding-top: 24px;
   font-family: $font-family-basic;
   color: $color-darkgray;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid $color-gray;
 
   @media (min-width: $tablet-width) {
     @include text(16px, 24px);
+    padding-bottom: 55px;
     width: 375px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-top: 70px;
     border: none;
   }
 }
@@ -86,14 +109,24 @@
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 65px;
+      top: 5px;
+      left: 131px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
       left: 131px;
     }
   }
 
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
-    padding-top: 60px;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    padding: 0;
   }
 }
 
@@ -123,6 +156,14 @@
       width: 141px;
       height: 194px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 41px;
+      left: 65px;
+
+      width: 71px;
+      height: 97px;
+    }
   }
 
   &--weight::before {
@@ -142,11 +183,24 @@
       width: 268px;
       height: 113px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 69px;
+      left: 34px;
+
+      width: 134px;
+      height: 57px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     width: 708px;
     height: 372px;
     padding-left: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    padding: 0 50px;
   }
 }

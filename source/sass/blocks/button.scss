@@ -1,7 +1,6 @@
 .button {
   @include text(16px, 20px);
   display: block;
-  margin: 0 auto;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -14,11 +13,11 @@
   color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    width: 247px;
+    width: 249px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 167px;
+    width: 169px;
   }
 
   &:hover {
