@@ -4,10 +4,34 @@
 }
 
 .show-more__title {
+  position: relative;
+
   @include text(16px, 20px);
   font-weight: normal;
+  padding-top: 70px;
 
   text-transform: uppercase;
+
+  &::before {
+    @include pseudo-element();
+    top: 10px;
+    left: 130px;
+
+    width: 31px;
+    height: 31px;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      left: 100px;
+
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/icon-plus.svg");
+    }
+  }
 
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
