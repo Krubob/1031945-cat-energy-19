@@ -1,5 +1,33 @@
+.slider__cat-image {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    height: 499px;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 499px;
+    width: auto;
+  }
+}
+
+.slider__progress-block {
+  text-align: center;
+}
+
 .slider__input {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.slider__progress-button {
+  @include text(16px, 20px);
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  border: none;
 }

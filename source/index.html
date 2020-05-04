@@ -55,13 +55,23 @@
           <p class="promo-block__slogan">
             Занялся собой? Займись котом!
           </p>
-          <img
-            class="promo-block__image"
-            src="img/index-can-mobile.png"
-            width="280"
-            height="270"
-            alt="Изображение функционального питания Кэт энерджи Pro со вкусом курицы"
-          />
+          <picture>
+            <source
+              media="(min-width: 1300px)"
+              srcset="img/index-can-desktop.png"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/index-can-tablet.jpg"
+            />
+            <img
+              class="promo-block__image"
+              src="img/index-can-mobile.png"
+              width="280"
+              height="270"
+              alt="Изображение функционального питания Кэт энерджи Pro со вкусом курицы"
+            />
+          </picture>
           <a class="promo-block__button button" href="#">Подобрать программу</a>
         </div>
       </section>
@@ -111,50 +121,63 @@
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
             Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
             этом он не менял своих привычек и по-прежнему спит по 16 часов в
-            день
+            день.
           </p>
           <div class="usecases__results-wrapper">
-            <dl class="usecases__result">
-              <dt class="usecases__value">5 кг</dt>
-              <dd class="usecases__field">снижение веса</dd>
-            </dl>
-            <dl class="usecases__result">
-              <dt class="usecases__value">60 дней</dt>
-              <dd class="usecases__field">затрачено времени</dd>
-            </dl>
+            <div class="usecases__result">
+              <dl class="usecases__result-item">
+                <dt class="usecases__value">5 кг</dt>
+                <dd class="usecases__field">снижение веса</dd>
+              </dl>
+              <dl class="usecases__result-item">
+                <dt class="usecases__value">60 дней</dt>
+                <dd class="usecases__field">затрачено времени</dd>
+              </dl>
+            </div>
+            <p class="usecases__costs">
+              <span span class="usecases__costs-span">
+                Затраты на&nbsp;питание:
+              </span>
+              <span>15&nbsp;000&nbsp;руб.</span>
+            </p>
           </div>
-          <p class="usecases__costs">Затраты на питание: 15 000 руб.</p>
           <div class="usecases__slider slider">
-            <img
-              class="slider__cat-image slider__cat-image--before"
-              src="img/before-mobile.png"
-              width="311"
-              height="232"
-              alt="До использования продукта"
-            />
-            <img
-              class="slider__cat-image slider__cat-image--after visually-hidden"
-              src="img/after-mobile.png"
-              width="311"
-              height="232"
-              alt="После использования продукта"
-            />
-            <button
-              class="slider__progress-button slider__progress-button--before"
-              type="button"
-            >
-              Было
-            </button>
-            <button
-              class="slider__progress-button slider__progress-button--after"
-              type="button"
-            >
-              Стало
-            </button>
+            <picture>
+              <source
+                media="(min-width: 1300px)"
+                srcset="img/before-desktop.png"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/before-tablet.png"
+              />
+              <img
+                class="slider__cat-image"
+                src="img/before-mobile.png"
+                width="311"
+                height="232"
+                alt="Изображение кота до и после приема функционального питания Кэт энерджи"
+              />
+            </picture>
+            <div class="slider__progress-block">
+              <button
+                class="slider__progress-button slider__progress-button--before"
+                type="button"
+              >
+                Было
+              </button>
+              <button
+                class="slider__progress-button slider__progress-button--after"
+                type="button"
+              >
+                Стало
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__contacts contacts">
@@ -164,19 +187,40 @@
               к сотрудничеству <br />
               дилеров!
             </h3>
-            <p class="contacts__address">
-              ул. Большая <br />
-              Конюшенная, д. 19/8 <br />
-              Санкт-Петербург
-            </p>
+            <div class="contacts__address">
+              <p class="contacts__address-street">
+                ул. Большая Конюшенная, д. 19/8
+              </p>
+              <p class="contacts__address-city">Санкт-Петербург</p>
+            </div>
           </div>
           <div class="contacts__map">
-            <img
-              src="img/bg-map-mobile.png"
+            <iframe
+              class="contacts__map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.9750205566963!2d30.322076840808084!3d59.938765264719976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1586253181213!5m2!1sru!2sru"
               width="320"
               height="400"
-              alt="Карта с адресом магазина Кэт энерджи"
-            />
+              tabindex="0"
+              aria-label="Интерактивная карта"
+            >
+            </iframe>
+            <!-- <picture>
+              <source
+                media="(min-width: 1300px)"
+                srcset="img/bg-map-desktop.png"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/bg-map-tablet.png"
+              />
+              <img
+                width="320"
+                height="400
+                class="contacts__map-image"
+                src="img/bg-map-mobile.png"
+                alt="Месторасположение магазина Кэт энерджи на карте"
+              />
+            </picture> -->
           </div>
         </div>
         <div class="footer__inner">
@@ -193,19 +237,13 @@
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#"
-                  >Мы в Вконтакте</a
-                >
+                <a class="social__link social__link--vkontakte" href="#"></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="#"
-                  >Мы в Инстаграмме</a
-                >
+                <a class="social__link social__link--instagram" href="#"></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="#"
-                  >Мы в Фейсбуке</a
-                >
+                <a class="social__link social__link--facebook" href="#"></a>
               </li>
             </ul>
           </div>

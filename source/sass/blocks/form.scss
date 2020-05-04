@@ -1,18 +1,41 @@
+.form-block {
+  @include container();
+  border: 1px solid black;
+}
+
 .form__fieldset {
   border: none;
+
   display: flex;
-  flex-direction: column;
+
+  padding: 0;
 }
 
 .form__legend {
+  position: relative;
+  z-index: 1;
+
   @include text(24px, 24px);
   font-weight: normal;
+
+  padding-right: 30px;
+
+  display: inline-block;
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    @include text(36px, 36px);
+  }
 }
 
 .form__label {
   @include text(16px, 18px);
   color: $color-subtitle;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
 }
 
 .form__input {
@@ -20,27 +43,196 @@
   color: $color-darkgray;
   font-weight: normal;
   text-transform: uppercase;
+
+  border: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
 }
 
 .form__input::placeholder {
   color: $color-darkgray;
 }
 
+.form__cat--info-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__fieldset--cat-info {
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    margin-right: 70px;
+  }
+}
+
+.form__fieldset--program-goal {
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.form__wrapper--cat-owner {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.form__row--cat-owner-email {
+  @media (min-width: $desktop-width) {
+    margin-right: 50px;
+  }
+}
+
+.form__input--field-email {
+  flex-grow: 1;
+
+  @media (min-width: $desktop-width) {
+    width: 486px;
+  }
+}
+
+.form__input--field-phone {
+  flex-grow: 1;
+
+  @media (min-width: $desktop-width) {
+    width: 472px;
+  }
+}
+
+.form__row-wrapper--radio {
+  @media (min-width: $tablet-width) {
+    border: 1px solid #e6e6e6;
+    padding: 30px;
+  }
+}
+
+.form__label--radio {
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
+}
+
+.form__row-wrapper--additionally {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__label--field {
+  margin-right: 15px;
+}
+
+.form__input--field {
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  flex-grow: 1;
+}
+
+.form__row--additionally {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+    margin-right: 50px;
+  }
+}
+
+.form__label--checkbox {
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-rigth: 30px;
+  }
+}
+
+.form__input--textarea {
+  width: 100%;
+  padding: 15px;
+}
+
+.form__button__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.form__button {
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 63px;
+    padding-right: 63px;
+    width: 283px;
+    margin-right: 150px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+  }
+}
+
+.form-title {
+  border: 1px solid black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
 .form-title__title {
+  @include container();
+  @include zero-indent;
   @include text(36px, 60px);
   font-weight: normal;
+
+  padding-top: 22px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $color-gray;
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    border-bottom: none;
+  }
 }
 
 .form-title__description {
   @include text(14px, 18px);
   font-weight: normal;
-}
 
-.form__notion {
-  font-size: $font-size-mobile-p;
-  line-height: 16px;
-  font-family: $font-family-basic;
-  color: $color-darkgray;
+  text-transform: uppercase;
+
+  padding-top: 22px;
+  padding-right: 22px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 30px);
+    width: 370px;
+  }
 }
 
 .form__required-fields {

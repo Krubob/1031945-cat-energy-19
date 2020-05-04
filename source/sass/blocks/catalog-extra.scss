@@ -22,11 +22,15 @@
 }
 
 .catalog-extra__title {
-  @include text(36px, 36px);
+  @include text(24px, 24px);
   font-weight: normal;
 
   @media (min-width: $tablet-width) {
-    @include text(60px, 60px);
+    @include text(36px, 36px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text(36px, 36px);
   }
 }
 
@@ -77,7 +81,7 @@
   text-align: right;
 
   @media (min-width: $tablet-width) {
-    width: 93px;
+    padding-right: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -121,7 +125,8 @@
 
 .catalog-extra__button {
   @media (min-width: $tablet-width) {
-    width: 631px;
+    margin: 0 auto;
+    width: 633px;
   }
 
   @media (min-width: $desktop-width) {

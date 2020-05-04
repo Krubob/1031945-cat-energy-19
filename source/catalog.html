@@ -271,8 +271,8 @@
             <h3 class="catalog-extra__card-title">Сахарозаменитель</h3>
             <table class="catalog-extra__table">
               <tr>
-                <td class="catalog-extra__field">1 упаковка (100 г)</td>
-                <td class="catalog-extra__value">200 Р.</td>
+                <td class="catalog-extra__value">1 упаковка (100 г)</td>
+                <td class="catalog-extra__field">200 Р.</td>
               </tr>
             </table>
           </div>
@@ -333,26 +333,47 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="footer__contacts contacts">
+        <div class="footer__contacts contacts footer__contacts--gray">
           <div class="contacts__inner">
             <h3 class="contacts__title">
               Приглашаем<br />
               к сотрудничеству <br />
               дилеров!
             </h3>
-            <p class="contacts__address">
-              ул. Большая <br />
-              Конюшенная, д. 19/8 <br />
-              Санкт-Петербург
-            </p>
+            <div class="contacts__address">
+              <p class="contacts__address-street">
+                ул. Большая Конюшенная, д. 19/8
+              </p>
+              <p class="contacts__address-city">Санкт-Петербург</p>
+            </div>
           </div>
           <div class="contacts__map">
-            <img
-              src="img/bg-map-mobile.png"
+            <iframe
+              class="contacts__map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.9750205566963!2d30.322076840808084!3d59.938765264719976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1586253181213!5m2!1sru!2sru"
               width="320"
               height="400"
-              alt="Карта с адресом магазина Кэт энерджи"
-            />
+              tabindex="0"
+              aria-label="Интерактивная карта"
+            >
+            </iframe>
+            <!-- <picture>
+              <source
+                media="(min-width: 1300px)"
+                srcset="img/bg-map-desktop.png"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/bg-map-tablet.png"
+              />
+              <img
+                width="320"
+                height="400
+                class="contacts__map-image"
+                src="img/bg-map-mobile.png"
+                alt="Месторасположение магазина Кэт энерджи на карте"
+              />
+            </picture> -->
           </div>
         </div>
         <div class="footer__inner">
@@ -369,19 +390,13 @@
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#"
-                  >Мы в Вконтакте</a
-                >
+                <a class="social__link social__link--vkontakte" href="#"></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="#"
-                  >Мы в Инстаграмме</a
-                >
+                <a class="social__link social__link--instagram" href="#"></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="#"
-                  >Мы в Фейсбуке</a
-                >
+                <a class="social__link social__link--facebook" href="#"></a>
               </li>
             </ul>
           </div>
