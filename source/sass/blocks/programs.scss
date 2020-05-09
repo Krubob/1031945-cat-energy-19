@@ -1,206 +1,213 @@
-.programs {
-  @include container();
+.programs-wrapper {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-}
 
-.programs__title {
-  position: relative;
-
-  @include zero-indent();
-  @include text(24px, 37px);
-
-  padding-top: 32px;
-  padding-left: 92px;
-
-  font-weight: normal;
-  text-transform: uppercase;
-
-  &::after {
-    @include pseudo-element();
-    top: 24px;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: $color-green;
-
-    @media (min-width: $tablet-width) {
-      top: 92px;
-      left: 394px;
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 47px;
-      left: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 100px;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
-    font-size: 36px;
-    line-height: 37px;
-    padding-top: 81px;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include text(36px, 37px);
-    padding-left: 166px;
-  }
-}
-
-.programs__description {
-  @include zero-indent();
-  @include text(14px, 18px);
-  padding-bottom: 24px;
-  padding-top: 24px;
-  font-family: $font-family-basic;
-  color: $color-darkgray;
-  border-bottom: 1px solid $color-gray;
-
-  @media (min-width: $tablet-width) {
-    @include text(16px, 24px);
-    padding-bottom: 55px;
-    width: 375px;
-    border: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 100%;
-    padding-top: 70px;
-    border: none;
-  }
-}
-
-.programs__link {
-  position: relative;
-  display: block;
-  padding-top: 20px;
-
-  @include text(16px, 16px);
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $color-black;
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  &::before {
-    @include pseudo-element();
-    top: 22px;
-    left: 95px;
-    width: 25px;
-    height: 12px;
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: $tablet-width) {
-      top: 5px;
-      left: 131px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 0;
-      left: 131px;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    @include text(20px, 20px);
-    padding: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    @include text(20px, 20px);
-    padding: 0;
+    margin: 0 70px;
   }
 }
 
 .programs__card {
   position: relative;
-
-  @include zero-indent();
-  margin-top: 20px;
-  height: 266px;
-  padding-left: 20px;
+  padding: 0 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   background-color: $color-gray;
 
-  &--slim::before {
+  @media (min-width: $tablet-width) {
+    padding-left: 52px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-top: 76px;
+    // width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    width: 570px;
+  }
+}
+
+.programs__description--slim {
+  @media (min-width: $tablet-width) {
+    width: 375px;
+    padding-right: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 462px;
+  }
+}
+
+.programs__description--weight {
+  @media (min-width: $tablet-width) {
+    padding-right: 350px;
+    width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 450px;
+  }
+}
+
+.programs__title {
+  @include text(24px, 37px);
+  position: relative;
+
+  // padding-top: 29px;
+  padding-left: 70px;
+
+  font-weight: normal;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include text(36px, 37px);
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  &::before {
     @include pseudo-element();
-    z-index: 1;
-    top: 22px;
-    left: 30px;
+    top: -6px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $color-green;
+
+    @media (min-width: $tablet-width) {
+      top: 15px;
+      left: 393px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -30px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.programs__title--slim {
+  &::after {
+    @include pseudo-element();
+    top: -8px;
+    left: 7px;
+
     width: 35px;
     height: 49px;
     background-image: url("../../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 80px;
-      left: 475px;
+      top: 4px;
+      left: 425px;
 
       width: 141px;
       height: 194px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 41px;
-      left: 65px;
+      top: -35px;
+      left: 15px;
 
       width: 71px;
       height: 97px;
     }
   }
+}
 
-  &--weight::before {
+.programs__title--weight {
+  &::after {
     @include pseudo-element();
-    z-index: 1;
-    top: 35px;
-    left: 13px;
+    top: 5px;
+    left: -7px;
+
     width: 67px;
     height: 28px;
     background-image: url("../../img/icon-cat-pro.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 135px;
-      left: 412px;
+      top: 60px;
+      left: 360px;
 
       width: 268px;
       height: 113px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 69px;
-      left: 34px;
+      top: -8px;
+      left: -18px;
 
       width: 134px;
       height: 57px;
     }
   }
+}
+
+.programs__description {
+  @include text(14px, 18px);
+  padding-bottom: 21px;
+  border-bottom: 1px solid #d9d9d9;
+
+  font-family: $font-family-basic;
+  color: $color-darkgray;
 
   @media (min-width: $tablet-width) {
-    width: 708px;
-    height: 372px;
-    padding-left: 55px;
+    @include text(16px, 24px);
+    padding-bottom: 35px;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
-    width: 570px;
-    padding: 0 50px;
+    padding-bottom: 30px;
+  }
+}
+
+.programs__link {
+  position: relative;
+
+  @include text(16px, 16px);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    @include pseudo-element();
+    width: 25px;
+    height: 12px;
+    top: 7px;
+    right: -37px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      left: 131px;
+    }
   }
 }
