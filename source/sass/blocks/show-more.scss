@@ -1,6 +1,7 @@
 .show-more {
   text-align: center;
   background-color: $color-white;
+  border: 1px solid $color-gray;
 }
 
 .show-more__title {
@@ -8,14 +9,15 @@
 
   @include text(16px, 20px);
   font-weight: normal;
-  padding-top: 70px;
-
+  padding-top: 63px;
+  margin-bottom: 8px;
+  margin-top: 25px;
   text-transform: uppercase;
 
   &::before {
     @include pseudo-element();
     top: 10px;
-    left: 130px;
+    left: 125px;
 
     width: 31px;
     height: 31px;
@@ -24,8 +26,8 @@
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 10px;
-      left: 100px;
+      top: 55px;
+      left: 37px;
 
       width: 61px;
       height: 61px;
@@ -35,6 +37,10 @@
 
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
+    padding-top: 165px;
+    width: 135px;
+    margin: 0 auto;
+    margin-bottom: 25px;
   }
 }
 
@@ -42,15 +48,33 @@
   @include text(12px, 16px);
   color: $color-darkgray;
   font-family: $font-family-basic;
+  margin-top: 0;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     @include text(16px, 20px);
+    width: 175px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 167px;
   }
 }
 
 .show-more__button {
   color: $color-darkgray;
   background-color: $color-gray;
+  width: 100%;
 
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 249px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+  }
 }
