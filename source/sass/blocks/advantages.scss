@@ -76,56 +76,32 @@
 
 .advantages__description--natural {
   &::before {
-    background-image: url("../img/advantage-leaf.png");
+    background-image: url("../img/advantage-leaf@1x.png");
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/bg-instruction-one.png");
-    background-repeat: no-repeat;
-    background-position: 130px 0;
   }
 }
 
 .advantages__description--cooking {
   &::before {
-    background-image: url("../../img/advantage-powder.png");
+    background-image: url("../../img/advantage-powder@1x.png");
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/bg-instruction-two.png");
-    background-repeat: no-repeat;
-    background-position: 130px 0;
   }
 }
 
 .advantages__description--feeding {
   &::before {
-    background-image: url("../../img/advantage-dining.png");
+    background-image: url("../../img/advantage-dining@1x.png");
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/bg-instruction-three.png");
-    background-repeat: no-repeat;
-    background-position: 130px 0;
   }
 }
 
 .advantages__description--term {
   &::before {
-    background-image: url("../../img/advantage-clock.png");
+    background-image: url("../../img/advantage-clock@1x.png");
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/bg-instruction-four.png");
-    background-repeat: no-repeat;
-    background-position: 130px 0;
   }
 }
