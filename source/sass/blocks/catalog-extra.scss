@@ -1,5 +1,59 @@
 .catalog-extra {
-  @include container();
+  position: relative;
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.catalog-extra__title {
+  position: relative;
+  z-index: 1;
+  margin-left: -22px;
+  padding-right: 22px;
+  padding-left: 22px;
+  margin-top: 27px;
+  margin-bottom: 32px;
+
+  @include text(24px, 24px);
+  font-weight: 400;
+  color: $color-black;
+  display: inline-block;
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    @include text(36px, 36px);
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 37px;
+    padding-right: 30px;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 39px;
+    margin-left: -39px;
+  }
+}
+
+.catalog-extra__extra-goods-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.catalog-extra__goods-wrapper {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .catalog-extra__good-card {
@@ -13,124 +67,75 @@
   }
 }
 
-.catalog-extra__card-wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-}
-
-.catalog-extra__title {
-  @include text(24px, 24px);
-  font-weight: normal;
-
-  @media (min-width: $tablet-width) {
-    @include text(36px, 36px);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include text(36px, 36px);
-  }
-}
-
-.catalog-extra__card-title {
-  @include zero-indent;
-  @include text(16px, 16px);
-  font-weight: normal;
-  text-transform: uppercase;
-
-  margin-top: 25px;
-  padding-right: 88px;
-
-  @media (min-width: $tablet-width) {
-    @include text(20px, 20px);
-    margin-top: 28px;
-  }
-}
-
-.catalog-extra__table {
-  @include text(14px, 14px);
-  width: 100%;
-  margin-bottom: 14px;
-  font-family: $font-family-basic;
-  color: $color-darkgray;
-
-  @media (min-width: $tablet-width) {
-    @include text(16px, 20px);
-    margin-bottom: 20px;
-    width: 250px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 290px;
-  }
-}
-
-.catalog-extra__field {
-  @media (min-width: $tablet-width) {
-    text-align: right;
-  }
-
-  @media (min-width: $desktop-width) {
-    text-align: left;
-  }
-}
-
-.catalog-extra__value {
-  text-align: right;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 50px;
-  }
-}
-
 .catalog-extra__promo {
-  min-height: 289px;
-
+  margin-bottom: 10px;
   text-align: center;
-
-  background-image: url("../img/gift-photo-mobile.jpg");
+  background-color: $color-green;
+  background-image: url("../img/gift-photo-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    background-image: url("../img/gift-photo-tablet.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop.jpg");
+    width: 245px;
+  }
 }
 
 .catalog-extra__promo-description {
   @include text(16px, 20px);
   position: relative;
-  font-family: $font-family-basic;
+  font-weight: 400;
   color: $color-white;
+  font-family: $font-family-basic;
 
-  padding-top: 190px;
+  padding-top: 187px;
   padding-right: 50px;
   padding-bottom: 40px;
   padding-left: 50px;
 
-  &::after {
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    text-align: left;
+    padding-top: 71px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 423px;
+
+    @media (min-width: $desktop-width) {
+      width: 165px;
+      padding-top: 170px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      text-align: center;
+    }
+  }
+
+  &::before {
     @include pseudo-element();
-    top: 65px;
-    left: 133px;
+    top: 66px;
+    left: 113px;
 
     width: 56px;
     height: 61px;
-
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
-  }
-}
 
-.catalog-extra__button {
-  @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    width: 633px;
-  }
+    @media (min-width: $tablet-width) {
+      top: 65px;
+      left: 90px;
+    }
 
-  @media (min-width: $desktop-width) {
-    width: 245px;
-    align-self: center;
+    @media (min-width: $desktop-width) {
+      top: 49px;
+      left: 96px;
+    }
   }
 }
