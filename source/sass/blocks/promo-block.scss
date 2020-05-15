@@ -4,7 +4,7 @@
   color: $color-white;
   font-weight: normal;
   margin-bottom: 20px;
-  // display: flex;
+  display: flex;
 
   &::before {
     @include pseudo-element();
@@ -69,7 +69,6 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 80px;
-    // margin-top: 30px;
   }
 }
 
@@ -113,7 +112,7 @@
   @media (min-width: $desktop-width) {
     width: 552px;
     height: 499px;
-    top: -23px;
+    top: -53px;
     left: 490px;
   }
 }
@@ -126,11 +125,23 @@
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
     margin-left: 88px;
-    width: 190px;
+    // padding-top: 15px;
+    // padding-bottom: 15px;
+    width: 245px;
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
     margin-left: 80px;
+  }
+
+  &:hover {
+    color: #ffffff;
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
   }
 }

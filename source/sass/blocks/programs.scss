@@ -1,14 +1,20 @@
+.programs {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+}
+
 .programs-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 
   @media (min-width: $desktop-width) {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin: 0 70px;
+    margin: 0 auto;
   }
 }
 
@@ -17,7 +23,7 @@
   padding: 0 20px;
   padding-top: 10px;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   background-color: $color-gray;
 
   @media (min-width: $tablet-width) {
@@ -25,11 +31,11 @@
     padding-right: 20px;
     padding-bottom: 60px;
     padding-top: 76px;
-    // width: 708px;
+    margin-bottom: 28px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 0;
+    // padding-right: 0;
     width: 570px;
   }
 }
@@ -37,22 +43,24 @@
 .programs__description--slim {
   @media (min-width: $tablet-width) {
     width: 375px;
-    padding-right: 310px;
+    padding-right: 275px;
   }
 
   @media (min-width: $desktop-width) {
     width: 462px;
+    padding-right: 35px;
   }
 }
 
 .programs__description--weight {
   @media (min-width: $tablet-width) {
-    padding-right: 350px;
+    padding-right: 315px;
     width: 340px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 450px;
+    padding-right: 35px;
+    width: 445px;
   }
 }
 
@@ -62,6 +70,7 @@
 
   // padding-top: 29px;
   padding-left: 70px;
+  margin-bottom: 29px;
 
   font-weight: normal;
   text-transform: uppercase;
@@ -106,8 +115,8 @@
 .programs__title--slim {
   &::after {
     @include pseudo-element();
-    top: -8px;
-    left: 7px;
+    top: -9px;
+    left: 9px;
 
     width: 35px;
     height: 49px;
@@ -164,6 +173,7 @@
 .programs__description {
   @include text(14px, 18px);
   padding-bottom: 21px;
+  margin-bottom: 19px;
   border-bottom: 1px solid #d9d9d9;
 
   font-family: $font-family-basic;
@@ -176,7 +186,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
+    padding-right: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -207,7 +219,19 @@
 
     @media (min-width: $tablet-width) {
       top: 10px;
-      left: 131px;
+      right: -48px;
+      // left: 131px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background: url("../img/icon-right-arrow-verylong.svg") no-repeat center;
+      width: 34px;
+      height: 12px;
+      top: 10px;
+      right: -57px;
     }
   }
 }

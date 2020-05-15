@@ -1,11 +1,9 @@
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
-
   width: 200px;
 
   @media (min-width: $tablet-width) {
@@ -17,7 +15,6 @@
 
 .social__link {
   display: block;
-
   padding-left: 13px;
   padding-right: 25px;
   margin-bottom: 18px;
@@ -29,26 +26,121 @@
 }
 
 .social__link--vkontakte {
+  display: block;
+  position: relative;
+  fill: $color-icon;
+  padding-top: 4px;
+  margin-right: -6px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
   svg {
     @media (min-width: $tablet-width) {
       width: 30px;
-      height: 36px;
+      height: 16px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $color-green;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $color-green;
+      opacity: 0.3;
     }
   }
 }
 
 .social__link--instagram {
+  display: block;
+  position: relative;
+  fill: $color-icon;
+  padding-top: 4px;
+  margin-right: -6px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
   svg {
     @media (min-width: $tablet-width) {
       width: 23px;
       height: 23px;
     }
   }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $color-green;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $color-green;
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__link--facebook {
-  @media (min-width: $tablet-width) {
-    width: 14px;
-    height: 28px;
+  display: block;
+  position: relative;
+  fill: $color-icon;
+  padding-top: 4px;
+  margin-right: -6px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  svg {
+    @media (min-width: $tablet-width) {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $color-green;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $color-green;
+      opacity: 0.3;
+    }
   }
 }
