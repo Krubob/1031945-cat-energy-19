@@ -34,9 +34,7 @@
     padding-right: 48px;
     padding-left: 39px;
     width: 570px;
-
     margin-top: 95px;
-
     background-color: $color-white;
     z-index: 3;
   }
@@ -47,11 +45,11 @@
   text-transform: uppercase;
   font-weight: normal;
   margin-right: 18px;
-
   width: 123px;
 
   @media (min-width: $tablet-width) {
     @include text(20px, 25px);
+    width: 160px;
   }
 }
 
@@ -59,10 +57,11 @@
   @include text(14px, 20px);
   color: $color-darkgray;
   font-family: $font-family-basic;
+  width: 139px;
 
   @media (min-width: $tablet-width) {
     @include text(16px, 20px);
-    // width: 160px;
+    width: 160px;
     text-align: right;
   }
 
@@ -85,6 +84,7 @@
 
 .contacts__map {
   position: relative;
+  background-color: $color-gray;
 
   &::before {
     @include pseudo-element();
@@ -95,6 +95,11 @@
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-pin.png");
+      background-size: 61px auto;
+    }
 
     @media (min-width: $tablet-width) {
       top: 147px;

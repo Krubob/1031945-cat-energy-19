@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "fonts.scss";
+@import "global.scss";
 @import "normalize.scss";
 @import "blocks/header.scss";
 @import "blocks/site-nav.scss";
@@ -25,49 +26,3 @@
 @import "blocks/main-nav.scss";
 @import "blocks/social.scss";
 @import "blocks/container.scss";
-
-body {
-  margin: 0;
-  padding: 0;
-
-  @include text(14px, 18px);
-  font-family: $font-family-main;
-  color: $color-black;
-  font-style: normal;
-
-  background-color: $color-white;
-}
-
-ul {
-  @include no-list();
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: no-wrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@media (min-width: $tablet-width) {
-  body {
-    background-size: 2702px auto;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  body {
-    background-size: 1440px auto;
-  }
-}

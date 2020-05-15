@@ -55,8 +55,23 @@
   color: $color-darkgray;
   font-weight: normal;
   text-transform: uppercase;
-
   border: 1px solid #e6e6e6;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-darkgray;
+  }
+
+  &:focus:invalid {
+    border: 1px solid $color-error;
+    box-shadow: inset 0 0 1px 1px $color-error;
+  }
+
+  &:active {
+    border: 1px solid $color-darkgray;
+    box-shadow: inset 0 0 1px 1px $color-darkgray;
+  }
 
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
@@ -139,6 +154,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 50px;
+  }
+}
+
+.form__row--cat-owner-email,
+.form__row--cat-owner-phone {
+  &:focus:invalid {
+    svg {
+      fill: $color-error;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $color-green;
+    }
   }
 }
 
@@ -261,6 +291,26 @@
     @media (min-width: $tablet-width) {
       width: 18px;
       height: 18px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    color: rgba(34, 34, 34, 0.3);
+
+    &::before {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
     }
   }
 
@@ -425,6 +475,26 @@
     @media (min-width: $tablet-width) {
       top: 3px;
       left: -48px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    color: rgba(34, 34, 34, 0.3);
+
+    &::before {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
     }
   }
 }

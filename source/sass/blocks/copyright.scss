@@ -2,21 +2,59 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $color-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: $color-green;
+    }
+  }
 }
 
 .copyright__link-text {
   @include text(16px, 16px);
-  @include zero-indent();
   text-decoration: none;
   font-family: $font-family-basic;
   color: $color-darkgray;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     margin-right: 16px;
+    width: 115px;
   }
 }
 
 .copyright__link-icon {
+  display: block;
+  position: relative;
+  fill: $color-icon;
   padding-top: 4px;
   margin-right: -6px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

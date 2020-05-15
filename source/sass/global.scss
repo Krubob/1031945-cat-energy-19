@@ -1,0 +1,41 @@
+// html {
+//   box-sizing: border-box;
+// }
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+
+body {
+  @include zero-indent;
+  @include text(14px, 18px);
+  font-family: $font-family-main;
+  color: $color-black;
+  font-style: normal;
+
+  background-color: $color-white;
+}
+
+ul {
+  @include no-list();
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: no-wrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

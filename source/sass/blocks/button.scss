@@ -6,19 +6,18 @@
   text-transform: uppercase;
   text-align: center;
   border: none;
-  cursor: pointer;
 
-  padding: 10px 20px;
+  width: 280px;
+  padding: 10px;
+  // padding: 10px 20px;
   background-color: $color-green;
   color: #ffffff;
 
-  &:hover {
-    color: #ffffff;
-    background-color: #5eaa2f;
+  @media (min-width: $tablet-width) {
+    width: 247px;
   }
 
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #5eaa2f;
+  @media (min-width: $desktop-width) {
+    width: 167px;
   }
 }
