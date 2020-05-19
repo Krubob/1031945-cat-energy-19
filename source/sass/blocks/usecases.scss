@@ -1,11 +1,12 @@
 .usecases {
   position: relative;
-  padding-top: 15px;
+  padding-top: 38px;
   padding-bottom: 35px;
   background-color: $color-gray;
 
   @media (min-width: $tablet-width) {
     z-index: 1;
+    padding-top: 15px;
     background-color: $color-white;
     border-top: 1px solid $color-gray;
     padding-bottom: 79px;
@@ -46,7 +47,7 @@
 .usecases__title {
   @include text(36px, 60px);
   font-weight: normal;
-  margin-top: 0;
+  margin-top: -22px;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -210,10 +211,6 @@
 .usecases__image-wrapper {
   @media (max-width: 767px) {
     background-color: $color-gray;
-
-    // @media (min-width: $desktop-width) {
-    //   padding-bottom: 133px;
-    // }
   }
 }
 

@@ -125,7 +125,7 @@
   background-color: $color-green;
   color: $color-white;
   width: 280px;
-  padding: 15px 63px;
+  padding: 10px 63px;
 
   @media (min-width: $tablet-width) {
     @include text(20px, 20px);
