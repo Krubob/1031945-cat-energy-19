@@ -49,6 +49,7 @@
   color: $color-darkgray;
   font-family: $font-family-basic;
   margin-top: 0;
+  padding: 0;
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
@@ -60,15 +61,29 @@
 
   @media (min-width: $desktop-width) {
     width: 167px;
+    margin-bottom: 80px;
   }
 }
 
 .show-more__button {
   color: $color-darkgray;
   background-color: $color-gray;
-  width: 100%;
-  cursor: pointer;
   margin: 0 auto;
+
+  @media (min-width: $mobile-width) {
+    width: 280px;
+    padding: 12px 94px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 249px;
+    padding: 12px 79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    padding: 12px 39px;
+  }
 
   &:hover,
   &:focus {
@@ -78,13 +93,5 @@
   &:active {
     color: rgba(68, 68, 68, 0.3);
     background-color: #ebebeb;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 249px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 169px;
   }
 }

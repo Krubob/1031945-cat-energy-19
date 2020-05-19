@@ -4,7 +4,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 }
 
@@ -20,11 +19,11 @@
     padding-bottom: 0;
     padding-left: 0;
     margin-right: 7px;
+    align-self: start;
   }
 
   @media (min-width: $desktop-width) {
-    width: 210px;
-    margin-right: 530px;
+    margin-right: 550px;
   }
 }
 
@@ -34,16 +33,31 @@
   @media (min-width: $tablet-width) {
     width: 174px;
     height: 59px;
+    margin-top: 7px;
   }
 
   @media (min-width: $desktop-width) {
     width: 203px;
     height: 60px;
+    margin-left: 70px;
   }
 }
 
 .main-nav__logo-image {
   display: block;
+  position: relative;
+  fill: $color-icon;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
 
   &:hover,
   &:focus {

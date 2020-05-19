@@ -14,9 +14,11 @@
   </head>
 
   <body>
+
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
+
     <header class="header">
       <div class="header__wrapper">
         <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -42,6 +44,7 @@
             </a>
             <button class="main-nav__toggle" type="button"></button>
           </div>
+
           <ul class="main-nav__list site-nav">
             <li class="site-nav__item">
               <a class="site-nav__item-link" href="index.html">
@@ -62,11 +65,17 @@
         </nav>
       </div>
     </header>
+
     <main class="main">
-      <section class="catalog container">
-        <div class="catalog__title-block">
-          <h2 class="catalog__title">Каталог продукции</h2>
+
+      <section class="title-block container">
+        <div>
+          <h2 class="title-block__title">Каталог продукции</h2>
         </div>
+      </section>
+
+      <section class="catalog container">
+        <h3 class="visually-hidden">Товары функционального питания из&nbsp;каталога Кэт энерджи</h3>
         <div class="catalog__goods-wrapper">
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
@@ -141,6 +150,7 @@
             </div>
             <button class="catalog__button button">Заказать</button>
           </article>
+
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
               <a class="catalog__good-image" href="#">
@@ -216,6 +226,7 @@
             </div>
             <button class="catalog__button button">Заказать</button>
           </article>
+
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
               <a class="catalog__good-image" href="#">
@@ -289,6 +300,7 @@
             </div>
             <button class="catalog__button button">Заказать</button>
           </article>
+
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
               <a class="catalog__good-image" href="#">
@@ -364,6 +376,7 @@
             </div>
             <button class="catalog__button button">Заказать</button>
           </article>
+
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
               <a class="catalog__good-image" href="#">
@@ -442,6 +455,7 @@
             </div>
             <button class="catalog__button button">Заказать</button>
           </article>
+
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
               <a class="catalog__good-image" href="#">
@@ -524,6 +538,7 @@
             </div>
             <button class="catalog__button button">Заказать</button>
           </article>
+
           <article class="catalog__good-card">
             <div class="catalog__card-wrapper">
               <a class="catalog__good-image" href="#">
@@ -601,23 +616,26 @@
               Заказать
             </button>
           </article>
+
           <article class="catalog__good-card show-more">
-            <h3 class="show-more__title">
+            <p class="show-more__title">
               Показать еще 100500 товаров
-            </h3>
+            </p>
             <p class="show-more__subscription">
               На&nbsp;самом деле вкусов гораздо больше!
             </p>
-            <button class="show-more__button button">Показать все</button>
+            <a class="show-more__button button">Показать все</a>
           </article>
         </div>
       </section>
+
       <section class="catalog-extra">
         <div class="catalog-extra__title-block title-line">
           <div class="container">
             <h2 class="catalog-extra__title">Дополнительные товары</h2>
           </div>
         </div>
+
         <div class="catalog-extra__extra-goods-wrapper container">
           <div class="catalog-extra__goods-wrapper">
             <article class="catalog-extra__good-card extra-good">
@@ -636,6 +654,7 @@
                 Заказать
               </button>
             </article>
+
             <article class="catalog-extra__good-card extra-good">
               <div class="extra-good__card-wrapper">
                 <h3 class="extra-good__card-title">Питьевая вода</h3>
@@ -650,6 +669,7 @@
                 Заказать
               </button>
             </article>
+
             <article class="catalog-extra__good-card extra-good">
               <div class="extra-good__card-wrapper">
                 <h3 class="extra-good__card-title">Молоко</h3>
@@ -664,6 +684,7 @@
                 Заказать
               </button>
             </article>
+
             <article class="catalog-extra__good-card extra-good">
               <div class="extra-good__card-wrapper">
                 <h3 class="extra-good__card-title">Витамины</h3>
@@ -681,16 +702,17 @@
               </button>
             </article>
           </div>
+
           <div class="catalog-extra__promo">
             <p class="catalog-extra__promo-description">
-              Закажите все <br />
-              и получите чехол для <br />
-              кота в подарок!
+              Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!
             </p>
           </div>
         </div>
       </section>
+
     </main>
+
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__contacts contacts footer__contacts--gray">
@@ -772,7 +794,7 @@
         </div>
         <div class="footer__inner container">
           <div class="footer__logo">
-            <a class="footer__logo-link">
+            <a class="footer__logo-link" href="index.html">
               <img
                 src="img/logo-footer.svg"
                 width="128"
@@ -809,6 +831,8 @@
           <a
             class="footer__copyright copyright"
             href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Переход на сайт разработчика HTML Academy"
+            target="_blank"
           >
             <span class="copyright__link-text">
               HTML academy
@@ -822,7 +846,8 @@
         </div>
       </div>
     </footer>
+
     <script src="js/nav.min.js"></script>
-    <script src="js/picturefill.min.js"></script>
+    <script src="js/picturefill.min.js" async="></script>
   </body>
 </html>
