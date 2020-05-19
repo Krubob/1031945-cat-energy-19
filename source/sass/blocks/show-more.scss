@@ -9,14 +9,14 @@
 
   @include text(16px, 20px);
   font-weight: normal;
-  padding-top: 63px;
+  padding-top: 50px;
   margin-bottom: 8px;
   margin-top: 25px;
   text-transform: uppercase;
 
   &::before {
     @include pseudo-element();
-    top: 10px;
+    top: 0;
     left: 125px;
 
     width: 31px;
@@ -68,6 +68,8 @@
 .show-more__button {
   color: $color-darkgray;
   background-color: $color-gray;
+  cursor: pointer;
+  outline: none;
   margin: 0 auto;
 
   @media (min-width: $mobile-width) {

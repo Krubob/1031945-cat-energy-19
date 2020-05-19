@@ -18,10 +18,6 @@ body {
   background-color: $color-white;
 }
 
-ul {
-  @include no-list();
-}
-
 img {
   max-width: 100%;
   height: auto;

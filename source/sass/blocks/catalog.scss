@@ -19,24 +19,18 @@
 }
 
 .catalog__good-card {
-  padding-bottom: 24px;
+  padding-bottom: 22px;
 
   @media (max-width: 767px) {
-    // margin-left: -20px;
-    // margin-right: -20px;
     margin-top: -1px;
-    // padding-right: 20px;
-    // padding-left: 20px;
     border: 1px solid $color-gray;
   }
 
   @media (min-width: $tablet-width) {
     width: 324px;
-    // padding-left: 30px;
-    // padding-right: 30px;
     background-color: $color-gray;
     padding-bottom: 41px;
-    margin-bottom: 137px;
+    margin-bottom: 132px;
 
     &:nth-last-child(2),
     &:nth-last-child(1) {
@@ -190,6 +184,7 @@
   margin: 0 auto;
   background-color: $color-green;
   color: $color-white;
+  cursor: pointer;
 
   @media (min-width: $mobile-width) {
     width: 280px;

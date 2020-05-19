@@ -27,6 +27,10 @@
   }
 }
 
+.main-nav__list {
+  @include no-list();
+}
+
 .main-nav__logo {
   display: block;
 

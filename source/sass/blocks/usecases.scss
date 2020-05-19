@@ -217,20 +217,12 @@
 .usecases__image-wrapper--after {
   @media (min-width: $tablet-width) {
     overflow: hidden;
-    background-image: linear-gradient(
-      to top,
-      #eaeaea 384px,
-      $color-white 384px
-    );
+    background-image: linear-gradient(to top, #eaeaea 384px, $color-white 384px);
   }
 
   @media (min-width: $desktop-width) {
     overflow: hidden;
-    background-image: linear-gradient(
-      to top,
-      #eaeaea 460px,
-      $color-white 460px
-    );
+    background-image: linear-gradient(to top, #eaeaea 460px, $color-white 460px);
     padding-bottom: 135px;
   }
 }
@@ -242,20 +234,12 @@
     width: 338px;
     overflow: hidden;
 
-    background-image: linear-gradient(
-      to top,
-      $color-gray 384px,
-      $color-white 384px
-    );
+    background-image: linear-gradient(to top, $color-gray 384px, $color-white 384px);
   }
 
   @media (min-width: $desktop-width) {
     overflow: hidden;
-    background-image: linear-gradient(
-      to top,
-      $color-gray 460px,
-      $color-white 460px
-    );
+    background-image: linear-gradient(to top, $color-gray 460px, $color-white 460px);
     padding-bottom: 135px;
   }
 }

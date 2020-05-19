@@ -58,6 +58,7 @@
   color: $color-darkgray;
   font-family: $font-family-basic;
   width: 139px;
+  margin-top: -10px;
 
   @media (min-width: $tablet-width) {
     @include text(16px, 20px);
