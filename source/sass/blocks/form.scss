@@ -150,7 +150,7 @@
 }
 
 .form__wrapper--cat-owner {
-  margin-bottom: -12px;
+  margin-bottom: -10px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
@@ -572,6 +572,8 @@
 }
 
 .form__wrapper--comment {
+  margin-bottom: 3px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
     margin-right: 40px;

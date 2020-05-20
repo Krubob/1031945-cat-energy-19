@@ -1,6 +1,6 @@
 .catalog-extra {
   position: relative;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
@@ -17,7 +17,7 @@
   margin-left: -22px;
   padding-right: 22px;
   padding-left: 22px;
-  margin-top: 27px;
+  margin-top: 30px;
   margin-bottom: 32px;
 
   @include text(24px, 24px);
@@ -116,7 +116,7 @@
 
   padding-top: 181px;
   padding-right: 50px;
-  padding-bottom: 45px;
+  padding-bottom: 41px;
   padding-left: 50px;
 
   @media (min-width: $tablet-width) {
@@ -139,7 +139,7 @@
 
   &::before {
     @include pseudo-element();
-    top: 66px;
+    top: 60px;
     left: 113px;
 
     width: 56px;
