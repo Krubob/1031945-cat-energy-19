@@ -61,10 +61,6 @@
 .catalog__card-wrapper {
   display: flex;
 
-  @media (max-width: 767px) {
-    margin-bottom: -4px;
-  }
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;

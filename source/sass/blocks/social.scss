@@ -1,4 +1,5 @@
 .social__list {
+  @include no-list();
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
